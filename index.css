@@ -14,7 +14,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
     width: 90%;
     margin: 0 auto;
 }
@@ -28,24 +28,20 @@
     color: #333;
     text-decoration: none;
     font-size: 11px;
+    margin-bottom: 10px;
+    padding-top: 8px;
 }
 
 
 /*  */
 
-.nav-link {
+.banner-li a {
     position: relative;
     display: inline-block;
-    padding: 20px 30px;
-    text-decoration: none;
-    color: #2f4663;
-    background: #efefef;
-    font-family: Arial, sans-serif;
-    font-size: 15px;
     transition: color 0.3s ease;
 }
 
-.nav-link::before {
+.banner-li a::before {
     content: "";
     position: absolute;
     top: 0;
@@ -58,6 +54,7 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.nav-link:hover::before {
+.banner-li a:hover::before {
     transform: scaleX(1);
+    color: #f37021;
 }

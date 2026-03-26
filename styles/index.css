@@ -373,7 +373,7 @@ nav {
 /* tailored dropdown */
 
 .tailored-menu {
-    width: min(1360px, calc(100vw - 32px));
+    width: min(1360px, calc(100vw - 180px));
     background: #f4f4f4;
 }
 

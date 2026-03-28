@@ -89,7 +89,7 @@ nav .nav-links {
     height: 100%;
 }
 
-nav .nav-links>a {
+nav .nav-links > a {
     position: relative;
     display: flex;
     align-items: center;
@@ -208,7 +208,6 @@ nav {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transform: translateY(10px);
     transform: translate(-50%, 10px);
     transition: 0.25s ease;
 }
@@ -259,6 +258,8 @@ nav {
     font-size: 14px;
     color: #4b4b4b;
     text-decoration: none;
+    margin: 0;
+    height: auto;
     margin: 0;
     height: auto;
     padding: 12px 0;
@@ -379,7 +380,7 @@ nav {
 /* tailored dropdown */
 
 .tailored-menu {
-    width: min(1360px, calc(100vw - 32px));
+    width: min(1360px, calc(100vw - 180px));
     background: #f4f4f4;
 }
 
@@ -1363,3 +1364,4 @@ nav {
     font-size: 14px;
     font-weight: 600;
 }
+

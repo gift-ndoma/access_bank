@@ -126,6 +126,29 @@
         width: 100%;
         clip-path: none;
     }
+
+        .sme-value-section {
+        padding: 48px 20px;
+    }
+
+    .sme-value-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .sme-card {
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .sme-card img {
+        width: 100%;
+        max-height: 220px;
+    }
+
+    .sme-card-copy {
+        padding: 24px;
+    }
 }
 
 @media (max-width: 990px) {
@@ -604,3 +627,204 @@
     }
 }
 
+
+@media (max-width: 1200px) {
+    .payday-wrap {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .payday-copy {
+        padding: 0;
+        text-align: center;
+    }
+
+    .payday-copy p {
+        margin: 0 auto 26px;
+    }
+
+    .payday-image-pane {
+        min-height: 520px;
+    }
+
+    .payday-circle {
+        width: 520px;
+        height: 520px;
+        bottom: -120px;
+    }
+
+    .percent-mark {
+        font-size: 240px;
+    }
+
+    /* Early Savers */
+    .early-savers-section {
+        min-height: 520px;
+        padding: 32px 24px;
+    }
+
+    .early-savers-card {
+        padding: 36px 24px;
+    }
+
+    .card-accent {
+        border-top-width: 90px;
+        border-right-width: 70px;
+    }
+
+    .eyebrow {
+        font-size: 24px;
+    }
+
+    .early-savers-card h2 {
+        font-size: 40px;
+    }
+
+    .description {
+        font-size: 24px;
+        max-width: 100%;
+    }
+
+    .cta {
+        font-size: 20px;
+        padding: 12px 22px;
+    }
+    
+
+    /* Ways to Bank Section */
+
+    .ways-to-bank-wrap {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .ways-to-bank-copy {
+        text-align: center;
+    }
+
+    .ways-to-bank-copy p {
+        margin: 0 auto 24px;
+    }
+
+    .ways-to-bank-copy h2 {
+        font-size: 52px;
+    }
+
+    .ways-to-bank-copy h3 {
+        font-size: 44px;
+    }
+
+    .ways-to-bank-copy p {
+        font-size: 19px;
+    }
+
+    .sme-value-intro h2 {
+        font-size: 24px;
+    }
+
+    .sme-card {
+        grid-template-columns: 42% 58%;
+    }
+
+    .sme-card-copy {
+        padding: 40px 28px;
+    }
+
+    .access-money-wrap {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .access-money-visual {
+        min-height: 400px;
+    }
+
+    .phone-base {
+        width: 520px;
+        height: 520px;
+        bottom: -140px;
+    }
+
+    .access-money-card {
+        padding: 36px 24px;
+    }
+
+    .card-corner {
+        border-top-width: 80px;
+        border-right-width: 60px;
+    }
+
+    .access-money-card h2 {
+        font-size: 40px;
+    }
+
+    .access-money-card p {
+        font-size: 18px;
+    }
+
+    .contact-channels-wrap {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .contact-intro {
+        padding: 8px 4px 12px;
+    }
+
+    .contact-intro h2 {
+        font-size: 34px;
+        max-width: 100%;
+    }
+
+    .phone-title {
+        font-size: 28px;
+    }
+
+    .phone-list {
+        font-size: 24px;
+    }
+
+    .contact-card {
+        min-height: 220px;
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .bank-your-way-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .bank-your-way-left p {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .bank-your-way-section {
+        padding: 48px 16px;
+    }
+
+    .bank-your-way-tabs li {
+        font-size: 18px;
+        padding: 18px 16px;
+    }
+
+    .bank-your-way-right {
+        grid-template-columns: 1fr;
+    }
+
+    .bank-your-way-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 20px;
+    }
+
+    .bank-your-way-copy h3 {
+        font-size: 32px;
+    }
+
+    .bank-your-way-image {
+        min-height: 260px;
+    }
+}

@@ -47,7 +47,7 @@
 }
 
 .banner-li a:hover {
-    color: #f37021;
+    color: #000;
 }
 
 .banner-li a::before {
@@ -55,17 +55,18 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 0;
+    width: 100%;
     height: 3px;
-    background-color: #f37021;
+    background-color: #000;
+    transform: scaleX(0);
     transform-origin: left;
-    transition: width 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 .banner-li a:hover::before {
-    width: 100%;
+    transform: scaleX(1);
+    color: #000;
 }
-
 
 /* Navigation Links */
 
@@ -76,12 +77,19 @@ nav {
     height: 50px;
 }
 
+/* nav img {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    object-fit: contain;
+} */
+
 nav .nav-links {
     display: flex;
     height: 100%;
 }
 
-nav .nav-links > a {
+nav .nav-links>a {
     position: relative;
     display: flex;
     align-items: center;
@@ -99,16 +107,17 @@ nav .nav-links > a {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 0;
+    width: 100%;
     height: 4px;
-    background-color: #f37021;
+    background-color: #000;
+    transform: scaleX(0);
     transform-origin: left;
-    transition: width 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 .nav-links>a:hover::before,
 .nav-links>a.active::before {
-    width: 100%; 
+    transform: scaleX(1);
 }
 
 nav .search-container {
@@ -128,7 +137,7 @@ nav .search-container input {
 
 .search-container .banking {
     font-size: 14px;
-    background-color: #f37021;
+    background-color: #000;
     color: #fff;
     height: 100%;
     margin: 0;
@@ -138,9 +147,7 @@ nav .search-container input {
 }
 
 
-/* =========================
-NAV DROPDOWNS / MEGA MENU
-========================= */
+/* NAV DROPDOWNS / MEGA MENU */
 
 nav {
     position: relative;
@@ -179,13 +186,17 @@ nav {
     left: 0;
     width: 100%;
     height: 4px;
-    background-color: #f37021;
+    background-color: #000;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease-in-out;
 }
 
 .nav-item:hover>a::before {
+    transform: scaleX(1);
+}
+
+.nav-item>a.active::before {
     transform: scaleX(1);
 }
 
@@ -259,12 +270,12 @@ nav {
 
 .side-menu a:hover,
 .sub-menu a:hover {
-    color: #f37021;
+    color: #000;
 }
 
 .mega-divider {
     width: 6px;
-    background: #f37021;
+    background: #000;
     border-radius: 4px;
     margin: 20px 0;
 }
@@ -279,7 +290,7 @@ nav {
 .mega-main-copy h3 {
     font-size: 20px;
     font-weight: 300;
-    color: #f37021;
+    color: #000;
     margin-bottom: 18px;
 }
 
@@ -315,7 +326,7 @@ nav {
     width: fit-content;
     padding: 12px 22px;
     border: none;
-    background: #f37021;
+    background: #000;
     color: #fff;
     font-size: 14px;
     cursor: pointer;
@@ -323,7 +334,7 @@ nav {
 }
 
 .mega-promo button:hover {
-    background: #cf5f12;
+    background: #000;
 }
 
 .mega-footer {
@@ -345,10 +356,9 @@ nav {
 }
 
 .mega-footer a i {
-    color: #f37021;
+    color: #000;
     font-size: 20px;
 }
-
 
 /* tailored dropdown */
 
@@ -408,7 +418,7 @@ nav {
 
 .hero {
     height: 90vh;
-    background-image: url("https://www.accessbankplc.com/access/media/Access-Images-Library/amex-home-banner.png?ext=.png");
+    background-image: url("https://www.accessbankplc.com/access/media/Media-PDF-Attachment/Private-Bank-Banner3-1-(1).png?ext=.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -428,7 +438,7 @@ nav {
 }
 
 .hero-content p {
-    font-size: 18px;
+    font-size: 14px;
     margin-bottom: 20px;
 }
 
@@ -441,670 +451,364 @@ nav {
     color: #fff;
 }
 
+/* Private Mission */
 
-/* Feature Strip */
-
-.feature-strip {
-    position: relative;
-    margin-top: -60px;
-    z-index: 10;
-    /* background-color: #ebebeb ; */
+.private-mission {
+    background-color: #000;
+    color: #fff;
+    padding: 64px 20px;
+    height: 6%;
 }
 
-.feature-box {
-    width: 90%;
+.private-mission-inner {
+    max-width: 500px;
     margin: 0 auto;
-    display: flex;
-    background-color: #a8c814;
-    clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);
+    text-align: center;
 }
 
-.feature-item {
-    flex: 1;
-    padding: 12px 40px;
-    border-right: 1px solid rgba(255, 255, 255, 0.5);
-    position: relative;
-}
-
-.feature-item:last-child {
-    border-right: none;
-}
-
-.feature-item h3 {
+.private-mission-inner p {
     font-size: 17px;
-    margin-bottom: 15px;
-    font-weight: 700;
-    color: #000;
+    line-height: 1.7;
+    margin-bottom: 24px;
 }
 
-.feature-item p {
+.private-mission-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
     font-size: 14px;
-    line-height: 1.6;
+    text-transform: lowercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.private-mission-btn:hover {
+    background-color: #fff;
     color: #000;
 }
 
-.feature-item::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background-color: #fff;;
-    transform-origin: left;
-    transition: width 0.3s ease;
+/* Product Mission */
+
+.products-showcase {
+    background: #000;
+    padding: 36px 20px 90px;
 }
 
-.feature-item:hover::after {
-    width: 100%;
-}
-
-
-/* Latest News */
-
-.latest-news {
-    width: 100%;
-    background-color: #f7efe7;
-    margin-top: 45px;
-}
-
-.news-row {
-    width: 90%;
+.products-showcase-inner {
+    width: min(1100px, 100%);
     margin: 0 auto;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
 }
 
-.news-label {
-    font-size: 12px;
-    font-weight: 700;
-    color: #5a5a5a;
-    white-space: nowrap;
-    margin-right: 28px;
-}
-
-.news-text {
-    font-size: 12px;
-    color: #5a5a5a;
-    white-space: nowrap;
-    margin-right: 70px;
-}
-
-.news-bars {
-    display: flex;
+.products-showcase-image {
     width: 100%;
-    height: 5px;
-}
-
-.news-bars .blue {
-    background-color: #0d4d92;
-    width: 35%;
-}
-
-.news-bars .red {
-    background-color: #e7381c;
-    width: 30%;
-}
-
-.news-bars .green {
-    background-color: #a8c814;
-    width: 20%;
-}
-
-.news-bars .orange {
-    background-color: #f37021;
-    width: 10%;
-}
-
-.news-bars .teal {
-    background-color: #0d7f84;
-    width: 5%;
-}
-
-
-/* Banking Section */
-
-.banking-section {
-    background: #f3f3f3;
-    padding: 70px 40px;
-    text-align: center;
-}
-
-.banking-section h2 {
-    font-size: 28px;
-    font-weight: 300;
-    margin-bottom: 10px;
-    color: #111;
-}
-
-.banking-section h2 span {
-    font-weight: 700;
-}
-
-.banking-section p {
-    max-width: 900px;
-    margin: 0 auto 60px;
-    font-size: 14px;
-    line-height: 1.6;
-    color: #111;
-}
-
-.banking-slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-.banking-item {
-    position: relative;
-    width: 150px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.icon-box {
-    position: relative;
-    z-index: 2;
-}
-
-.icon-box img {
-    width: 40px;
-    height: 90px;
-    object-fit: contain;
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.hover-image {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%) scale(0.9);
-    width: 140px;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.35s ease;
-    z-index: 1;
-}
-
-.hover-image img {
-    width: 100%;
+    height: auto;
     display: block;
 }
 
-.banking-item h3 {
-    font-size: 12px;
+.products-cards {
+    margin-top: -200px;
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 28px;
+    padding: 0 36px;
+}
+
+.products-card {
+    background: #1b1c1f;
+    color: #fff;
+    width: 100%;
+    max-width: 470px;
+    min-height: 400px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cards2 {
+    margin-top: 80px;
+}
+
+.products-card h3 {
+    font-size: 25px;
     font-weight: 400;
-    color: #111;
-    line-height: 1.5;
-    position: relative;
-    z-index: 2;
+    line-height: 1.2;
+    margin-bottom: 20px;
 }
 
-.banking-item:hover .hover-image,
-.banking-item.active .hover-image {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) scale(1);
-}
-
-.banking-item:hover .icon-box,
-.banking-item.active .icon-box {
-    transform: scale(1.12);
-    filter: brightness(0) invert(1) contrast(1.2);
-}
-
-.banking-item:hover h3,
-.banking-item.active h3 {
-    color: #fff;
-}
-
-
-/* Loan Section */
-.loan-section {
-    background: #eeeeee;
-    padding: 70px 0;
-    position: relative;
-}
-
-.loan-box {
-    width: 90%;
-    margin: 0 auto;
-    position: relative;
-    display: flex;
-    align-items: center;
-    ;
-}
-
-.loan-left {
-    background: #f58b00;
-    width: 72%;
-    height: 350px;
-    display: flex;
-    align-items: center;
-    padding: 35px 40px;
-}
-
-.loan-info {
-    width: 43%;
-    color: #fff;
-}
-
-.loan-info h2 {
-    font-size: 28px;
-    margin-bottom: 16px;
-    font-weight: 700;
-}
-
-.loan-info p {
-    font-size: 14px;
+.products-card p {
+    font-size: 13px;
     line-height: 1.7;
 }
 
-.loan-terms {
-    margin-top: 12px;
-    background: rgba(0, 0, 0, 0.15);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 14px;
-    width: fit-content;
-    font-size: 13px;
-}
-
-.loan-terms p {
-    margin: 0;
-}
-
-.loan-divider {
-    width: 1px;
-    height: 210px;
-    background: rgba(255, 255, 255, 0.7);
-    margin: 0 28px;
-}
-
-.loan-salary {
-    flex: 1;
-    text-align: center;
+.products-card a {
+    margin-top: auto;
     color: #fff;
-}
-
-.loan-salary p {
-    font-size: 14px;
-    margin-bottom: 18px;
-}
-
-.salary-circle {
-    width: 160px;
-    height: 160px;
-    border: 6px solid rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.salary-circle::after {
-    content: "";
-    width: 30px;
-    height: 30px;
-    background: #fff;
-    border-radius: 50%;
-    position: absolute;
-    top: 8px;
-    left: 2px;
-}
-
-.salary-circle span {
-    font-size: 23px;
-    font-weight: 700;
-}
-
-.loan-right {
-    width: 450px;
-    height: 300px;
-    position: absolute;
-    right: -10px;
-    background: #fff;
-    margin-left: -40px;
-    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 8px 25px rgba(5, 0, 10, 5.12);
-    padding: 30px;
-    text-align: center;
-}
-
-.loan-right .small-text {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.loan-right h3 {
-    font-size: 28px;
-    color: #f58b00;
-    margin-bottom: 16px;
-    font-weight: 500;
-}
-
-.loan-right .tenor {
-    font-size: 13px;
-    color: #666;
-    line-height: 1.6;
-    margin: 18px;
-}
-
-.loan-right button {
-    border: 2px solid #555;
-    background: transparent;
-    padding: 10px 16px;
-    font-size: 13px;
-    cursor: pointer;
-}
-
-
-/* Services Section */
-.services-section {
-    padding: 80px 40px;
-    background: #fff;
-    text-align: center;
-}
-
-.services-section h2 {
-    font-size: 28px;
-    font-weight: 300;
-    color: #007168;
-    margin-bottom: 20px;
-}
-
-.services-section h2 span {
-    font-weight: 700;
-}
-
-.services-section p {
-    /* max-width: 950px; */
-    margin: 0 auto 50px;
-    font-size: 14px;
-    line-height: 1.6;
-    color: #111;
-}
-
-.services-slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-}
-
-.service-arrow {
-    display: none;
-    border: none;
-    background: transparent;
-    font-size: 50px;
-    color: #555;
-    cursor: pointer;
-}
-
-.services-grid {
-    display: flex;
-    gap: 35px;
-}
-
-.service-card {
-    position: relative;
-    width: 350px;
-    height: 350px;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.service-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.service-overlay {
-    position: absolute;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-    background: rgba(255, 255, 255, 0.92);
-    padding: 28px 20px;
-    text-align: left;
-    transition: all 0.35s ease;
-}
-
-.service-card .service-overlay {
-    transform: translateY(55%);
-}
-
-.service-card .service-overlay p,
-.service-card .service-overlay a {
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.35s ease;
-}
-
-.service-card:hover .service-overlay {
-    transform: translateY(0);
-}
-
-.service-card:hover .service-overlay p,
-.service-card:hover .service-overlay a
-{
-    opacity: 1;
-    visibility: visible;
-}
-
-.service-icon img {
-    width: 60px;
-    height: 60px;
-}
-
-.service-overlay h3 {
-    font-size: 15px;
-    color: #007168;
-    margin-bottom: 18px;
-    font-weight: 700;
-}
-
-.service-overlay p {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #111;
-    margin-bottom: 20px;
-}
-
-.service-overlay a {
-    display: inline-block;
-    padding: 14px 24px;
-    border: 3px solid #111;
-    color: #111;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 36px;
+    align-self: flex-end;
+    transition: transform 0.25s ease;
 }
 
-
-/* CLOSA Section */
-.closa-section {
-    display: flex;
-    align-items: stretch;
-    margin: 0;
-    padding: 0;
+.products-card a:hover {
+    transform: translateX(3px);
 }
 
-.closa-left {
-    width: 60%;
-    background: #a8c814;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-left: 60px;
-    clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%);
-    z-index: 2;
-}
-
-.closa-content {
-    color: #fff;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.closa-content .small {
-    font-size: 16px;
-}
-
-.closa-content h2 {
-    font-size: 43px;
-    font-weight: 700;
-    margin: 5px 0;
-}
-
-.closa-content .sub {
-    font-size: 16px;
-    margin-bottom: 15px;
-    color: #000;
-}
-
-.closa-content .desc {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.closa-btn {
-    padding: 10px 20px;
-    border: 2px solid #000;
-    background: transparent;
-    color: #000;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.closa-btn:hover {
+/* Black Card Feature */
+.black-card-feature {
     background: #000;
     color: #fff;
-}
-
-.closa-right {
-    width: 100%;
-    margin-left: -70px;
-}
-
-.closa-right img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-}
-
-
-/* Explore Section */
-/* SECTION */
-.explore-section {
-    padding: 80px 40px;
-    background: #f3f3f3;
-    text-align: center;
-}
-
-.explore-section h2 {
-    font-size: 28px;
-    font-weight: 300;
-    color: #1b4f72;
-    margin-bottom: 10px;
-}
-
-.explore-section h2 span {
-    font-weight: 700;
-}
-
-.explore-section p {
-    max-width: 900px;
-    margin: 0 auto 50px;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.explore-grid {
     display: flex;
-    gap: 30px;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 70px 70px 40px;
 }
 
-.explore-card {
-    position: relative;
-    width: 350px;
-    height: 370px;
-    /* overflow: hidden; */
+.black-card-copy {
+    flex: 1;
+    max-width: 720px;
 }
 
-.explore-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+.black-card-copy h2 {
+    font-size: 27px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    font-weight: 400;
 }
 
-.explore-overlay {
-    position: absolute;
-    bottom: -35px;
-    left: 0;
-    right: 0;
-    width: 99%;
-    background: #0d4d92;
-    color: #fff;
-    text-align: left;
-    padding: 25px;
-    clip-path: polygon(0 0, 95% 0, 100% 100%, 0% 100%);
-}
-
-.explore-overlay h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.explore-overlay p {
+.black-card-copy p {
     font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 20px;
+    line-height: 1.7;
+    max-width: 700px;
+    margin-bottom: 30px;
 }
 
-.explore-btn {
+.black-card-btn {
     display: inline-block;
-    padding: 10px 20px;
-    border: 2px solid #fff;
-    background: transparent;
+    border: 3px solid #fff;
     color: #fff;
-    font-size: 14px;
     text-decoration: none;
-    transition: all 0.3s ease;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    padding: 14px 24px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.explore-btn:hover {
+.black-card-btn:hover {
     background: #fff;
     color: #000;
 }
+
+.black-card-image-wrap {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.black-card-image-wrap img {
+    width: min(900px, 100%);
+    height: auto;
+    display: block;
+}
+
+/* Private Assistance */
+.private-assistance {
+    background: #000;
+    color: #fff;
+    padding: 34px 20px 60px;
+}
+
+.private-assistance>p {
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.45;
+    margin-bottom: 34px;
+}
+
+.private-assistance-panel {
+    width: min(1280px, 100%);
+    margin: 0 auto;
+    min-height: 350px;
+    display: grid;
+    grid-template-columns: 1.05fr 1.75fr;
+}
+
+.private-assistance-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.private-assistance-copy {
+    background-color: #1d1f24;
+    background-image: url("https://www.accessbankplc.com/content/images/private-banking/terrain-pattern.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 70px 64px;
+}
+
+.private-assistance-copy h3 {
+    font-size: 26px;
+    line-height: 1.05;
+    color: #f58b00;
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+
+.private-assistance-copy p {
+    font-size: 17px;
+    margin-bottom: 24px;
+}
+
+.private-assistance-btn {
+    display: inline-block;
+    padding: 9px 16px;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.private-assistance-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.custom-services {
+    background: #131416;
+    color: #e9e2e2;
+    padding: 60px 24px 70px;
+    text-align: center;
+}
+
+.custom-services h2 {
+    font-size: 30px;
+    line-height: 1.15;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.custom-services>p {
+    font-size: 17px;
+    color: #f1f1f1;
+    margin-bottom: 36px;
+}
+
+.custom-services-grid {
+    width: min(1260px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.custom-service-card {
+    background: #060606;
+    padding: 62px 24px 42px;
+    border-bottom: 4px solid #f58b00;
+}
+
+.custom-service-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 22px;
+}
+
+.custom-service-card h3 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+
+.custom-service-card p {
+    font-size: 17px;
+    line-height: 1.55;
+    max-width: 340px;
+    margin: 0 auto;
+}
+
+
+.call-banner {
+    background: #121316;
+    padding: 18px 20px 78px;
+}
+
+.call-banner-inner {
+    width: min(1280px, 100%);
+    margin: 0 auto;
+    position: relative;
+}
+
+.call-banner-inner img {
+    width: 100%;
+    display: block;
+}
+
+.call-banner-card {
+    position: absolute;
+    left: 40px;
+    bottom: -50px;
+    width: min(390px, calc(100% - 120px));
+    background: #020202;
+    color: #fff;
+    padding: 36px 28px;
+    min-height: 400px;
+}
+
+.call-banner-card h3 {
+    font-size: 30px;
+    line-height: 1.1;
+    margin-bottom: 18px;
+    font-weight: 400;
+}
+
+.call-banner-card p {
+    font-size: 17px;
+    line-height: 1.6;
+    max-width: 290px;
+}
+
+.call-banner-card a {
+    position: absolute;
+    right: 20px;
+    bottom: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 36px;
+}
+
+.call-banner-icon {
+    position: absolute;
+    right: 68px;
+    bottom: 22px;
+    width: 68px;
+    height: 68px;
+    background: #f58b00;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 36px;
+}
+
 
 
 /* Tools Section */
 .tools-section {
     padding: 60px 80px;
-    background: #f3f3f3;
+    background: #404040;
 }
 
 .tools-section h2 {
     font-size: 22px;
     font-weight: 400;
-    color: #3c4f68;
+    color: #fff;
     margin-bottom: 30px;
 }
 
@@ -1117,8 +821,8 @@ nav {
 .tool-card {
     width: 160px;
     height: 150px;
-    background: #f7f7f7;
-    border: 6px solid #d9e2ec;
+    background: #404040;
+    border: 6px solid #646668;
     padding: 28px 22px;
     display: flex;
     flex-direction: column;
@@ -1130,34 +834,34 @@ nav {
 
 .tool-card img {
     width: 30px;
+    /* height: 56px; */
+    object-fit: contain;
 }
 
 .tool-card p {
     font-size: 12px;
     line-height: 1.5;
-    color: #3c4f68;
+    color: #fff;
     transition: color 0.3s ease;
 }
 
-.tool-card:hover {
+.tool-card:hover,
+.tool-card.active {
     background: #f58b2f;
     border-color: #f58b2f;
     transform: scale(1.05);
     box-shadow: 0 18px 35px rgba(245, 139, 47, 0.28);
 }
 
-.tool-card:hover p {
+.tool-card:hover p,
+.tool-card.active p {
     color: #fff;
 }
 
 .tool-card img {
     transition: filter 0.3s ease;
-}
-
-.tool-card:hover img {
     filter: brightness(0) invert(1);
 }
-
 
 
 /* Footer Section */
@@ -1168,7 +872,7 @@ nav {
 
 /* TOP BLUE AREA */
 .footer-top {
-    background: #004b93;
+    background: #000;
     color: #fff;
     padding: 55px 60px 30px;
     position: relative;
@@ -1214,7 +918,7 @@ nav {
     margin-bottom: 12px;
     transition: color 0.3s ease;
 }
-
+            
 .footer-col a:hover {
     color: #f58b00;
 }
@@ -1313,4 +1017,3 @@ nav {
     font-size: 14px;
     font-weight: 600;
 }
-

@@ -149,6 +149,16 @@
     .sme-card-copy {
         padding: 24px;
     }
+
+    .products-cards {
+        margin-top: 28px;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .products-card {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 990px) {
@@ -612,6 +622,75 @@
 @media (max-width: 1024px) {
     .footer-columns {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .black-card-feature {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 50px 20px 30px;
+    }
+
+    .black-card-copy h2 {
+        font-size: 42px;
+    }
+
+    .black-card-btn {
+        font-size: 16px;
+    }
+
+    .black-card-image-wrap {
+        width: 100%;
+        justify-content: center;
+    }
+
+        .private-assistance-intro {
+        font-size: 20px;
+    }
+
+    .private-assistance-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .private-assistance-copy {
+        padding: 40px 24px;
+    }
+
+    .private-assistance-copy h3 {
+        font-size: 36px;
+    }
+
+    .custom-services h2 {
+        font-size: 38px;
+    }
+
+    .custom-services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .call-banner {
+        padding-bottom: 36px;
+    }
+
+    .call-banner-card {
+        position: static;
+        width: 100%;
+        min-height: 0;
+        margin-top: 0;
+    }
+
+    .call-banner-card p {
+        max-width: none;
+    }
+
+    .call-banner-card a {
+        position: static;
+        display: inline-block;
+        margin-top: 14px;
+    }
+
+    .call-banner-icon {
+        right: 24px;
+        bottom: 24px;
     }
 }
 

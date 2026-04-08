@@ -374,14 +374,6 @@ nav {
     overflow: hidden;
 }
 
-.tailored-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.28);
-    transition: 0.3s ease;
-}
-
 .tailored-card span {
     position: relative;
     z-index: 2;
@@ -391,18 +383,9 @@ nav {
     text-align: center;
 }
 
-.tailored-card:hover::before {
-    background: rgba(0, 0, 0, 0.15);
-}
-
 .tailored-card:hover {
     transform: scale(1.02);
 }
-
-.nav-links>a.active::before {
-    transform: scaleX(1);
-}
-
 
 /* Banner Image */
 
@@ -456,7 +439,7 @@ nav {
     margin: 0 auto;
     display: flex;
     background-color: #a8c814;
-    clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
 }
 
 .feature-item {
@@ -570,6 +553,7 @@ nav {
     background: #f3f3f3;
     padding: 70px 40px;
     text-align: center;
+    margin-top: 50px;
 }
 
 .banking-section h2 {
@@ -643,8 +627,7 @@ nav {
     z-index: 2;
 }
 
-.banking-item:hover .hover-image,
-.banking-item.active .hover-image {
+.banking-item:hover .hover-image {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) scale(1);
@@ -880,7 +863,7 @@ nav {
     background: rgba(255, 255, 255, 0.92);
     padding: 28px 20px;
     text-align: left;
-    transition: all 0.35s ease;
+    transition: transform 0.35s ease;
 }
 
 .service-card .service-overlay {
